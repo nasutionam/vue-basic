@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Event and Methods</title>
+    <style>
+        .box { background: green; width: 200px; height: 200px;}
+    </style>
 </head>
 <body>
     
@@ -14,6 +17,13 @@
         <h3>Counter: {{ counter }}</h3>
         <button v-on:click="increamentCounter()">Increment ++</button>
         <button @click="increamentCounter()">Increment2 ++</button>
+        <br><br>
+
+        <div
+            class="box"
+            @mouseover="overTheBox">
+        
+        </div>
 
     </div>
 
