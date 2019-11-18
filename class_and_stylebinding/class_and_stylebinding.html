@@ -12,17 +12,25 @@
             height: 200px;
             border-radius: 50%;
         }
+        .square {
+            width: 200px;
+            height: 200px;
+        }
     </style>
 </head>
 <body>
     
     <div id="app">
        <div class="row justify-content-center mt-3">
-           <div class="circle"
+           <div v-bind:class="{ circle: flag, square: !flag }"
                 v-bind:style="styleObject">
 
            </div>
        </div>
+
+       <div class="row justify-content-center mt-3">
+           <button class="btn btn-success" @click="changeShape">Change Shape</button>
+        </div>
 
     </div>
 
